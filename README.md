@@ -5,9 +5,8 @@
   <em>Console logs to keep the fire burning</em>
 </p>
 
-<br/>
 
-<h1 align="center">🎄 Advent of Code 🎁</h1>
+<h2 align="center">🎄 Advent of Code 🎁</h2>
 
 <div align="center">
   <p>Solutions for the annual <strong>Advent of Code</strong> <a href="https://adventofcode.com/">(Website)</a> challenges</p>
