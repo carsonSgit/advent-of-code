@@ -11,15 +11,13 @@ function hasRepeatedSequence(id: number): boolean {
     // convert back to string for slicing
     const idString: string = id.toString();
 
-    // can only be repeated sequence if the length is even
-    if (idString.length % 2 !== 0) return false;
+    for (let i = 1; i <= Math.floor(idString.length / 2); i++) {
+        // checks if the current pattern is repeated throughout the id, if so, return true, if not, continue
+        const pattern = idString.slice(0, i);
+        if (pattern.repeat(idString.length / i) === idString) return true;
+    }
 
-    const half = idString.length / 2;
-    const firstHalf = idString.slice(0, half);
-    const secondHalf = idString.slice(half);
-
-    // check if first half is the same as second half
-    return firstHalf === secondHalf;
+    return false;
 }
 
 ids.forEach((end, start) => {
