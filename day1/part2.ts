@@ -2,7 +2,7 @@
 
 import * as fs from "fs";
 
-const filePath: string = './input.txt';
+const filePath: string = './day1/input.txt';
 const input: string = fs.readFileSync(filePath, 'utf8');
 
 const lines: string[] = input.split('\n').map(line => line.trim());
