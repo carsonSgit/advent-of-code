@@ -13,7 +13,7 @@
 </div>
 <div align="center">
   <img 
-    src="./2025/calendar_progress/day2.png"
+    src="./2025/calendar_progress/day3.png"
     style="height:500px; border-radius:12px;"
   />
 </div>
