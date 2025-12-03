@@ -9,23 +9,23 @@ const perBank: number = 12;
 let total: number = 0;
 
 banks.forEach(bank => {
-    let begin = 0;
-    let number: string = '';
+    let begin: number = 0;
+    let outputJoltage: string = '';
 
-    for (let remaining = perBank; remaining > 0; remaining--) {
-        let maxNum = '0';
-        let maxIndex = begin;
+    for (let remaining: number = perBank; remaining > 0; remaining--) {
+        let batteryJoltage: string = '0';
+        let maxIndex: number = begin;
 
-        for (let j = begin; j <= bank.length - remaining; j++) {
-            if (bank[j] > maxNum) {
-                maxNum = bank[j].toString();
+        for (let j: number = begin; j <= bank.length - remaining; j++) {
+            if (Number(bank[j]) > Number(batteryJoltage)) {
+                batteryJoltage = bank[j];
                 maxIndex = j;
             }
         }
-        number += maxNum;
+        outputJoltage += batteryJoltage;
         begin = maxIndex + 1;
     }
-    total += Number(number);
+    total += Number(outputJoltage);
 });
 
 console.log(total);
