@@ -51,7 +51,14 @@ while (true) {
 
 
 function isAdjacent(r: number, c: number, department: string[][]): boolean {
-    return r >= 0 && r < department.length && c >= 0 && c < department[r].length && department[r][c] === '@';
+    if (r < 0 || r >= department.length) {
+        return false;
+    }
+    if (c < 0 || c >= department[r].length) {
+        return false;
+    }
+
+    return department[r][c] === '@';
 }
 
 console.log(reachableRoll);
